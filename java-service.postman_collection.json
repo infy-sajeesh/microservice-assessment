@@ -1,0 +1,360 @@
+{
+	"info": {
+		"_postman_id": "ba01ccfb-d1b0-4c63-9d7a-df68bc093137",
+		"name": "java-service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27973498"
+	},
+	"item": [
+		{
+			"name": "fibonacci-standalone",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/Fibonacci?num=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"Fibonacci"
+					],
+					"query": [
+						{
+							"key": "num",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fibonacci-via-gateway",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/Fibonacci?num=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"Fibonacci"
+					],
+					"query": [
+						{
+							"key": "num",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fibonacci-via-gateway Error",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/Fibonacci?num=AA",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"Fibonacci"
+					],
+					"query": [
+						{
+							"key": "num",
+							"value": "AA"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reverse word  standalone",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8083/api/ReverseWords?sentence=how are you",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"ReverseWords"
+					],
+					"query": [
+						{
+							"key": "sentence",
+							"value": "how are you"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reverse word-via-gateway",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/ReverseWords?sentence=how are you",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"ReverseWords"
+					],
+					"query": [
+						{
+							"key": "sentence",
+							"value": "how are you"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reverse word-via-gateway Error",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/ReverseWords?sentence= ",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"ReverseWords"
+					],
+					"query": [
+						{
+							"key": "sentence",
+							"value": " "
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "triangle type  standalone",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8084/api/TriangleType?a=10&b=12&c=12",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"api",
+						"TriangleType"
+					],
+					"query": [
+						{
+							"key": "a",
+							"value": "10"
+						},
+						{
+							"key": "b",
+							"value": "12"
+						},
+						{
+							"key": "c",
+							"value": "12"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "triangle type  via gateway eq",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/TriangleType?a=12&b=12&c=12",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"TriangleType"
+					],
+					"query": [
+						{
+							"key": "a",
+							"value": "12"
+						},
+						{
+							"key": "b",
+							"value": "12"
+						},
+						{
+							"key": "c",
+							"value": "12"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "triangle type  via gateway isosceles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/TriangleType?a=12&b=12&c=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"TriangleType"
+					],
+					"query": [
+						{
+							"key": "a",
+							"value": "12"
+						},
+						{
+							"key": "b",
+							"value": "12"
+						},
+						{
+							"key": "c",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "triangle type  via gateway scala",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/TriangleType?a=12&b=14&c=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"TriangleType"
+					],
+					"query": [
+						{
+							"key": "a",
+							"value": "12"
+						},
+						{
+							"key": "b",
+							"value": "14"
+						},
+						{
+							"key": "c",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "make one array",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"array1\" : [1,2,3,4],\r\n    \"array2\" : [3,4,5,6],\r\n    \"array3\" : [6,1,3,11]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/api/makeonearray",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"makeonearray"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "make one array gateway",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"array1\" : [1,2,3,4],\r\n    \"array2\" : [3,4,5,6],\r\n    \"array3\" : [6,1,3,11]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/makeonearray",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"makeonearray"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
