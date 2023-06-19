@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="fibonacci" />
+        <module name="reverseword" />
+        <module name="config-server" />
+        <module name="api-gateway-service" />
+        <module name="onearray" />
+        <module name="triangle" />
+        <module name="service-registry" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="api-gateway-service" options="-parameters" />
+      <module name="config-server" options="-parameters" />
+      <module name="fibonacci" options="-parameters" />
+      <module name="onearray" options="-parameters" />
+      <module name="reverseword" options="-parameters" />
+      <module name="service-registry" options="-parameters" />
+      <module name="triangle" options="-parameters" />
+    </option>
+  </component>
+</project>

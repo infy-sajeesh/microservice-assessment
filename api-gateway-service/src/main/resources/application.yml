@@ -1,0 +1,35 @@
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
+    hostname: localhost
+#    preferIpAddress: true
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+#app:
+#  eureka-server: localhost
+spring:
+  application:
+    name: api-gateway-service
+  cloud:
+    discovery:
+      enabled: true
+    gateway:
+      routes:
+        - id: fibonacci
+          uri: lb://fibonacci
+          predicates:
+            - Path=/api/Fibonacci
+        - id: reverseword
+          uri: lb://reverseword
+          predicates:
+            - Path=/api/ReverseWords
+        - id: triangle
+          uri: lb://triangle
+          predicates:
+            - Path=/api/TriangleType
+        - id: onearray
+          uri: lb://onearray
+          predicates:
+            - Path=/api/makeonearray

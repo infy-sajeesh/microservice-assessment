@@ -1,0 +1,5 @@
+response-messages:
+  error:
+    5000: Unexpected internal server error..!
+    5001: Invalid Data
+    5002: Request Validation failed
