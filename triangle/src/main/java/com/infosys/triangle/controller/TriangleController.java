@@ -2,6 +2,7 @@ package com.infosys.triangle.controller;
 
 import com.infosys.triangle.service.TriangleService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.CacheControl;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,6 +22,9 @@ public class TriangleController {
 
     @GetMapping
     public ResponseEntity<String> getTriangleType(String a, String b, String c){
-        return new ResponseEntity<>(triangleService.checkTriangleType(a,b,c), HttpStatus.OK);
+        //return new ResponseEntity<>(triangleService.checkTriangleType(a,b,c), HttpStatus.OK);
+        return ResponseEntity.ok()
+                .cacheControl(CacheControl.noCache())
+                .body(triangleService.checkTriangleType(a,b,c));
     }
 }

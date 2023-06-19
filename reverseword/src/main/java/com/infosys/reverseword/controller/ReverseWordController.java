@@ -2,6 +2,7 @@ package com.infosys.reverseword.controller;
 
 import com.infosys.reverseword.service.ReverseWordService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.CacheControl;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,6 +22,9 @@ public class ReverseWordController {
 
     @GetMapping
     public ResponseEntity<String> getReverseWord(String sentence){
-        return new ResponseEntity<>(reverseWordService.reverseWords(sentence), HttpStatus.OK);
+        //return new ResponseEntity<>(reverseWordService.reverseWords(sentence), HttpStatus.OK);
+        return ResponseEntity.ok()
+                .cacheControl(CacheControl.noCache())
+                .body(reverseWordService.reverseWords(sentence));
     }
 }
