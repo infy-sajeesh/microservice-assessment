@@ -93,6 +93,8 @@
 				<configuration>
 					<excludes>
 						<exclude>com/infosys/onearray/exception/**</exclude>
+						<exclude>com/infosys/onearray/enumeration/**</exclude>
+						<exclude>com/infosys/onearray/dto/**</exclude>
 					</excludes>
 				</configuration>
 				<executions>

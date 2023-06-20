@@ -1,6 +1,6 @@
 package com.infosys.triangle.utility;
 
-public class Constants {
+public interface Constants {
 
     public static String EQ = "Equilateral";
     public static String IS = "Isosceles";
